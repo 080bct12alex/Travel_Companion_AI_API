@@ -1,6 +1,7 @@
 import express from "express";
 import fetch from "node-fetch";
 import { airportCodes } from "../utils/airportCodes";
+
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -27,7 +28,8 @@ router.get("/", async (req, res) => {
     if (!response.ok) {
       throw new Error(`SerpAPI error: ${response.statusText}`);
     }
-    const data = await response.json();
+
+    const data = (await response.json()) as { best_flights?: any[] }; // ✅ Type assertion
     res.json(data.best_flights || []);
   } catch (err) {
     console.error(err);
