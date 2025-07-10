@@ -14,7 +14,7 @@ app.use(express.json());
 app.use("/api/flights", flightsRouter);
 
 app.get("/", (_, res) => {
-  res.send("Travel Planner Backend is running");
+  res.send("Travel Companion AI Backend is running");
 });
 
 app.listen(PORT, () => {
