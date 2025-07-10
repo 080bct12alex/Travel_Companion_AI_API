@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import flightsRouter from "./routes/flights";
+import flightsRouter from "./routes/flights.js";
 
 dotenv.config();
 
