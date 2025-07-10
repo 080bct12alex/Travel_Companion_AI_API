@@ -1,6 +1,6 @@
 import express from "express";
 import fetch from "node-fetch";
-import { airportCodes } from "../utils/airportCodes";
+import { airportCodes } from "../utils/airportCodes.js";
 
 import dotenv from "dotenv";
 
